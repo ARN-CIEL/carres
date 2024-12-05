@@ -31,3 +31,23 @@ int CCarre::Getsy() {
 int CCarre::Getcote() {
     return cote;
 }
+
+void CCarre::Deplacer(char direction, int saut)
+{
+    switch (direction) 
+    {
+    case 'n':
+        // Nord 
+        sy -= saut;
+        break;
+    case 's': // Sud 
+        sy += saut;
+        break;
+    case 'o': // Ouest 
+        sx -= saut;
+        break;
+    case 'e': // Est 
+        sx += saut;
+        break;
+    }
+}

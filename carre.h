@@ -1,11 +1,9 @@
 
-
 class CCarre {
 private:
     int sx, sy, cote;
 
 public:
-
     /**
      * @brief Affecte la valeur de sx1 à sx
      * @param sx1 La nouvelle valeur de sx
@@ -46,6 +44,13 @@ public:
      * @return La valeur de cote
      */
     int Getcote();
-};
 
+    /**
+     * @brief Déplace le carré sans le dessiner.
+     * Modifie les attributs x et y en fonction de la direction et de la valeur de saut.
+     * @param direction La direction du déplacement ('n', 's', 'o', 'e')
+     * @param saut Nombre de pixels de déplacement du carré
+     */
+    void Deplacer(char direction, int saut);
+};
 
