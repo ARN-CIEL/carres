@@ -3,7 +3,6 @@
 
 using namespace std;
 
-CCarre::CCarre(int x, int y, int c) : sx(x), sy(y), cote(c) {}
 
 void CCarre::Setsx(int sx1) {
     sx = sx1;
@@ -17,6 +16,18 @@ void CCarre::Setcote(int cote1) {
     cote = cote1;
 }
 
-void CCarre::Afficher(){
+void CCarre::Afficher() {
     cout << "Carre de sommet (" << sx << ", " << sy << ") avec cote de longueur " << cote << " et surface " << cote * cote << endl;
+}
+
+int CCarre::Getsx() {
+    return sx;
+}
+
+int CCarre::Getsy() {
+    return sy;
+}
+
+int CCarre::Getcote() {
+    return cote;
 }

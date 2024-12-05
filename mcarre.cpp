@@ -4,13 +4,18 @@
 using namespace std;
 
 int main() {
-    CCarre carre(10, 20, 30);
+    CCarre c1;
+    c1.Setsx(15);
+    c1.Setsy(25);
+    c1.Setcote(35);
 
-    carre.Setsx(15);
-    carre.Setsy(25);
-    carre.Setcote(35);
+    // Afficher les caractéristiques
+    c1.Afficher();
 
-    carre.Afficher();
+    
+    cout << "Valeur de sx: " << c1.Getsx() << endl;
+    cout << "Valeur de sy: " << c1.Getsy() << endl;
+    cout << "Valeur de cote: " << c1.Getcote() << endl;
 
     return 0;
 }

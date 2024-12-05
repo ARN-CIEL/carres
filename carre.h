@@ -1,9 +1,10 @@
+
+
 class CCarre {
 private:
     int sx, sy, cote;
 
 public:
-    CCarre(int x, int y, int c); 
 
     /**
      * @brief Affecte la valeur de sx1 à sx
@@ -27,6 +28,24 @@ public:
      * @brief Affiche les caractéristiques du carré
      */
     void Afficher();
+
+    /**
+     * @brief Retourne la valeur de sx
+     * @return La valeur de sx
+     */
+    int Getsx();
+
+    /**
+     * @brief Retourne la valeur de sy
+     * @return La valeur de sy
+     */
+    int Getsy();
+
+    /**
+     * @brief Retourne la valeur de cote
+     * @return La valeur de cote
+     */
+    int Getcote();
 };
 
 
