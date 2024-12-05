@@ -31,9 +31,9 @@ int main() {
     c1.Afficher();
     cout << endl;
 
-    // Déplacer c2
-    c2.Deplacer('e', 5);
-    cout << "Apres deplacement de c2 vers l'est de 5 pixels:" << endl;
+    // Déplacer c2 avec la méthode surchargée
+    c2.Deplacer(5, -5); 
+    cout << "Apres deplacement de c2 avec un vecteur (5, -5):" << endl; 
     c2.Afficher();
     cout << endl;
     

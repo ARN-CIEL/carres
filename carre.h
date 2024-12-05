@@ -52,5 +52,7 @@ public:
      * @param saut Nombre de pixels de déplacement du carré
      */
     void Deplacer(char direction, int saut);
+
+    void Deplacer(int dx, int dy);
 };
 

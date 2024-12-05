@@ -51,3 +51,7 @@ void CCarre::Deplacer(char direction, int saut)
         break;
     }
 }
+void CCarre::Deplacer(int dx, int dy)
+{
+    sx += dx; sy += dy;
+}
