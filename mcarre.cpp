@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    CCarre c1, c2, c3, c4;
+    CCarre c1, c2, c4;
 
     c1.Setsx(10);
     c1.Setsy(20);
@@ -12,9 +12,8 @@ int main() {
 
     c2 = CCarre(50, 60, 40);
 
-    c3.Setsx(60);
-    c3.Setsy(88);
-    c3.Setcote(95);
+    // Allouer dynamiquement un carré pour c3
+    CCarre* c3 = new CCarre(60, 88, 95);
 
     c4.Setsx(95);
     c4.Setsy(100);
@@ -30,7 +29,7 @@ int main() {
     cout << endl;
 
     cout << "Caracteristiques de c3:" << endl;
-    c3.Afficher();
+    c3->Afficher(); // Utiliser l'opérateur flèche pour accéder aux membres de c3
     cout << endl;
 
     cout << "Caracteristiques de c4:" << endl;
@@ -49,6 +48,12 @@ int main() {
     c2.Afficher();
     cout << endl;
 
+    // Déplacer c3
+    c3->Deplacer('n', 10);
+    cout << "Apres deplacement de c3 vers le nord de 10 pixels:" << endl;
+    c3->Afficher();
+    cout << endl;
+
     /* Tester les méthodes Get et afficher les valeurs retournées pour c1
     cout << "Valeur de sx de c1: " << c1.Getsx() << endl;
     cout << "Valeur de sy de c1: " << c1.Getsy() << endl;
@@ -61,10 +66,12 @@ int main() {
     cout << "Valeur de cote de c2: " << c2.Getcote() << endl;
     cout << endl;
     */
+
     cout << endl;
-    cout<<endl;
+    cout << endl;
+
     // Initialiser un tableau de 4 carrés
-    CCarre carres[4] = { c1, c2, c3, c4 };
+    CCarre carres[4] = { c1, c2, *c3, c4 }; // Déréférencer c3 pour obtenir l'objet carré
 
     // Afficher les caractéristiques de chaque carré dans le tableau
     for (int i = 0; i < 4; ++i) {
@@ -72,6 +79,9 @@ int main() {
         carres[i].Afficher();
         cout << endl;
     }
+
+    // Libérer la mémoire allouée pour c3
+    delete c3;
 
     return 0;
 }
