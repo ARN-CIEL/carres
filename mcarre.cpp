@@ -4,25 +4,39 @@
 using namespace std;
 
 int main() {
-    CCarre c1, c2;
+    CCarre c1, c2, c3, c4;
 
-    
     c1.Setsx(10);
     c1.Setsy(20);
     c1.Setcote(30);
 
-    
     c2.Setsx(50);
     c2.Setsy(60);
     c2.Setcote(40);
 
-    // Afficher les caractéristiques initiales de c1 et c2
+    c3.Setsx(60);
+    c3.Setsy(88);
+    c3.Setcote(95);
+
+    c4.Setsx(95);
+    c4.Setsy(100);
+    c4.Setcote(40);
+
+    // Afficher les caractéristiques initiales de c1, c2, c3, c4
     cout << "Caracteristiques de c1:" << endl;
     c1.Afficher();
     cout << endl;
 
     cout << "Caracteristiques de c2:" << endl;
     c2.Afficher();
+    cout << endl;
+
+    cout << "Caracteristiques de c3:" << endl;
+    c3.Afficher();
+    cout << endl;
+
+    cout << "Caracteristiques de c4:" << endl;
+    c4.Afficher();
     cout << endl;
 
     // Déplacer c1
@@ -32,20 +46,34 @@ int main() {
     cout << endl;
 
     // Déplacer c2 avec la méthode surchargée
-    c2.Deplacer(5, -5); 
-    cout << "Apres deplacement de c2 avec un vecteur (5, -5):" << endl; 
+    c2.Deplacer(5, -5);
+    cout << "Apres deplacement de c2 avec un vecteur (5, -5):" << endl;
     c2.Afficher();
     cout << endl;
-    
+
+    /* Tester les méthodes Get et afficher les valeurs retournées pour c1
     cout << "Valeur de sx de c1: " << c1.Getsx() << endl;
     cout << "Valeur de sy de c1: " << c1.Getsy() << endl;
     cout << "Valeur de cote de c1: " << c1.Getcote() << endl;
-
     cout << endl;
 
+    // Tester les méthodes Get et afficher les valeurs retournées pour c2
     cout << "Valeur de sx de c2: " << c2.Getsx() << endl;
     cout << "Valeur de sy de c2: " << c2.Getsy() << endl;
     cout << "Valeur de cote de c2: " << c2.Getcote() << endl;
+    cout << endl;
+    */
+    cout << endl;
+    cout<<endl;
+    // Initialiser un tableau de 4 carrés
+    CCarre carres[4] = { c1, c2, c3, c4 };
+
+    // Afficher les caractéristiques de chaque carré dans le tableau
+    for (int i = 0; i < 4; ++i) {
+        cout << "Caracteristiques du carre " << i + 1 << " :" << endl;
+        carres[i].Afficher();
+        cout << endl;
+    }
 
     return 0;
 }
