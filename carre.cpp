@@ -4,6 +4,13 @@
 using namespace std;
 
 
+CCarre::CCarre() : sx(0), sy(0), cote(1) {}
+
+
+CCarre::CCarre(int sx1, int sy1, int cote1) : sx(sx1), sy(sy1), cote(cote1) {}
+
+
+
 void CCarre::Setsx(int sx1) {
     sx = sx1;
 }

@@ -10,9 +10,7 @@ int main() {
     c1.Setsy(20);
     c1.Setcote(30);
 
-    c2.Setsx(50);
-    c2.Setsy(60);
-    c2.Setcote(40);
+    c2 = CCarre(50, 60, 40);
 
     c3.Setsx(60);
     c3.Setsy(88);
