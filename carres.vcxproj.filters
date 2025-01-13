@@ -32,4 +32,9 @@
       <Filter>Fichiers sources</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Texte.md">
+      <Filter>Fichiers sources</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
